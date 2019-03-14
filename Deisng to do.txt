@@ -1,0 +1,3 @@
+Todo For Rora company:
+1. ERD DB Design Strcture
+2. UserInterface UX Design

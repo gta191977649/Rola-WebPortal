@@ -1,0 +1,26 @@
+LightStatement: {
+	id: PK
+	Light_id: FK
+	Dimming: Value
+	note: String
+	start_time: dateTime
+	end_time: dateTime
+}
+Light:{
+	id: PK
+	description: string
+}
+UserLight:{
+	light_id: FK
+	user_ud: FK
+}
+User:{
+	id: PK
+	Firstname: String
+	LastName:String
+	Email:String
+	Password:String
+	user_type: ADMIN | CLIENT
+}
+
+
