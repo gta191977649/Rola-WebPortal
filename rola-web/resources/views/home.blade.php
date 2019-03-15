@@ -32,50 +32,21 @@
                     <h1>Rora endpoints</h1>
                     <div class="container">
                         <div class="row">
-                            <div class="col-3">
-                                <div class="card bg-light mb-3">
-                                    <div class="card-body" style="display: flex; justify-content:center;align-content:center">
-                                        <h1 style="font-size: 45px;">R1</h1>
-                                        <span>
-                                            <small>Name:A</small>
-                                            <small>DIM:40%</small>
-                                        </span>
+                            @foreach ($rolas as $rola)
+                                <div class="col-3">
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-body" style="display: flex; justify-content:center;align-content:center">
+                                        <h1 style="font-size: 45px;">R{{$rola->id}}</h1>
+                                            <span>
+                                            <small>Name:{{$rola->name}}</small>
+                                            <small>DIM:{{$rola->dim * 100}}%</small>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="card bg-light mb-3">
-                                    <div class="card-body" style="display: flex; justify-content:center;align-content:center">
-                                        <h1 style="font-size: 45px;">R2</h1>
-                                        <span>
-                                            <small>Name:B</small>
-                                            <small>DIM:35%</small>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="card bg-light mb-3">
-                                    <div class="card-body" style="display: flex; justify-content:center;align-content:center">
-                                        <h1 style="font-size: 45px;">R3</h1>
-                                        <span>
-                                            <small>Name:C</small>
-                                            <small>DIM:63%</small>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="card bg-light mb-3">
-                                    <div class="card-body" style="display: flex; justify-content:center;align-content:center">
-                                        <h1 style="font-size: 45px;">R4</h1>
-                                        <span>
-                                            <small>Name:D</small>
-                                            <small>DIM:43%</small>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            
+                            
                         </div>
                     </div>
                 </div>
