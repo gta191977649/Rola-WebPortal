@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\UCPLoraMgrController;
+use App\Http\Controllers\LoraMgrController;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return UCPLoraMgrController::index();
+        return LoraMgrController::index();
     }
 }

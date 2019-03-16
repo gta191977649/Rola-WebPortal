@@ -2,26 +2,14 @@
 
 @section('content')
     <div class="card">
-        <h5 class="card-header">Rora Management</h5>
+        <h5 class="card-header">System Management</h5>
         <div class="card-body">
-            <h1>Search</h1>
-            <form class="mb-3">
-                <div class="row">
-                    <div class="col-10">
-                        <input type="text" class="form-control" placeholder="Search Rola ID or custom rola name">
-                    </div>
-                    <div class="col-2">
-                        <button type="button" style="width:100%;" class="btn btn-primary">Search</button>
-                    </div>
-                </div>
-            </form>
-            <h1>Rora endpoints</h1>
-                
-            <div class="container">
-                <div class="row">
-                    @if($rolas->count() == 0) 
-                    <p>No Lora has assign, please contact to your admin.</p>
-                    @endif
+                <h1>All Lora endpoints</h1>
+                <hr/>
+                <span>
+                <a class="btn btn-primary float-right" style="width:50px;" href="{{route('rola.add')}}" role="button">+ Add</a>
+                </span>
+                <div class="row mt-5">
                     @foreach ($rolas as $rola)
                         <div class="col-3">
                             <div class="card mb-3">
@@ -45,7 +33,6 @@
                     
                 </div>
             </div>
-        </div>
     </div>
-        
+    
 @endsection

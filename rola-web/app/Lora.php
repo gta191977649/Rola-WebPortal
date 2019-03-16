@@ -11,6 +11,7 @@ class Lora extends Model
         'name',
         'user_id',
         'dim',
+        'indicator_switch',
         'indicator_r',
         'indicator_g',
         'indicator_b',

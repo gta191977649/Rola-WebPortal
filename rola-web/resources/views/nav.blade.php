@@ -3,6 +3,7 @@
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><a href="#">User Management</a></li>
         <li class="list-group-item"><a href="#">Rora Management</a></li>
+    <li class="list-group-item"><a href="{{route('admin.rola')}}">Administrative functions</a></li>
     </ul>
     <div class="card-body">
         <button type="button" class="btn btn-primary" style="width:100%;">Logout</button>

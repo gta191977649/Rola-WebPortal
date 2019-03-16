@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/ucp/rola/edit/{id}', 'LoraMgrController@detail')->name('detail-rola');
+Route::get('/ucp/rola/add', 'LoraMgrController@addView')->name('rola.add.view');
+Route::post('/ucp/rola/add', 'LoraMgrController@add')->name('rola.add');
+Route::get('/ucp/admin/rola', 'LoraMgrController@adminIndex')->name('admin.rola');

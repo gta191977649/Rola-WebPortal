@@ -17,15 +17,21 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="//cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+    <link href="https://farbelous.io/bootstrap-colorpicker/v2/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -73,10 +79,44 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+      
+        <div class="container mt-3">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+            
+            <div class="container-fluid">
+               
+                @if(Auth::check())
+                <div class="row">
+                    <!-- Side bars -->
+                    <div class="col-3">
+                        @include('nav')
+                    </div>
+                    <!-- Main -->
+                    <div class="col-9">
+                        @yield('content')
+                    </div>
+                </div>
+                @else 
+                    @yield('content')
+                @endif
+            </div>
+        </div>
+ 
     </div>
+    <footer class="mt-5">
+        <p class="text-center">Lora Web Portal &copy; Le.Cai, Helen L 2019</p>
+    </footer>
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+
+    <script src="https://farbelous.io/bootstrap-colorpicker/v2/dist/js/bootstrap-colorpicker.js"></script>
+    <!-- Custom js -->
+    @yield('js')
 </body>
 </html>

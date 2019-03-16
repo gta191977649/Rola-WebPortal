@@ -1,0 +1,37 @@
+Dev Major Functions Progress:
+	Search:
+		x Search lora nodes
+		x Search registered user
+	Rola
+		CRUD Permissions:
+			Create: Admin Only
+			Update: Admin, User
+			Read: User, Admin
+			Delete: Admin Only
+		Detail View: 
+			User Assigned Rola endpoints: 
+				x Assigned Rola - OK, but frontend is not linked to the lola detail page
+			Details Page:
+				x History Chart
+				x Controls - Frontend OK, but not connect to the backend.
+	User
+		CRUD Permissions:
+			Create: User, self able to register into this system
+			Update: User, self able to change profile
+			Read: User, Admin
+			Delete: Admin Only ?
+		Profile Management:
+			x Profile Page
+	Admin
+		System Management:
+			x Add Lola - OK
+			x View Lola - OK
+			x Update Lola
+			x delete Lola
+		User Management:
+			x View all users
+			x Assign Lola Endpoints to user
+	API:
+		x List all lora nodes - OK
+		x List all users - OK
+		
