@@ -17,10 +17,24 @@
     <p>All avaiable rest api end points is listed in here.</p>
     <ul>
         <li>
-            <p>「GET」View all lora endpoints: <a href={{route('api.rola.index')}}>/rola</a></p>
+            <p>「GET」View all lora endpoints: <a href={{route('api.lora.index')}}>/lora</a></p>
         </li>
         <li>
             <p>「GET」View all user: <a href={{route('api.user.index')}}>/user</a></p>
+        </li>
+        <li>
+            <p>「POST」create a new lora endpoint: <a href={{route('api.lora.new')}}>/lora</a></p>
+            <strong>tpye: form-data paramters:</strong>
+            <ul>
+                
+                <li>name (string)</li>
+                <li>indicator_switch (int)</li>
+                <li>indicator_r (int 0 - 255)</li>
+                <li>indicator_g (int 0 - 255)</li>
+                <li>indicator_b (int 0 - 255)</li>
+                <li>dim (float 0 - 1) </li>
+                <li>description (string)</li>
+            </ul>
         </li>
     </ul>
 </body>
